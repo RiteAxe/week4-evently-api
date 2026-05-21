@@ -64,51 +64,50 @@ Automated API testing is implemented using Jest and Supertest.
 
 ## Project Structure
 
-week4-evently-api
-|
-├── prisma
-|   ├── schema.prisma
-|   └── seed.ts
-|
-├── src
-|   ├── controllers
-|   |   ├── adminController.ts
-|   |   ├── authController.ts
-|   |   └── eventController.ts
-|   |
-|   ├── middleware
-|   |   ├── authMiddleware.ts
-|   |   └── roleMiddleware.ts
-|   |
-|   ├── routes
-|   |   ├── adminRoutes.ts
-|   |   ├── authRoutes.ts
-|   |   └── eventRoutes.ts
-|   |
-|   ├── services
-|   |   ├── authService.ts
-|   |   └── eventService.ts
-|   |
-|   ├── tests
-|   |   ├── admin.test.ts
-|   |   ├── auth.test.ts
-|   |   └── events.test.ts
-|   |
-|   ├── validations
-|   |   ├── authValidation.ts
-|   |   └── eventValidation.ts
-|   |
-|   ├── app.ts
-|   └── prisma.ts
-|
+```text
+week4-evently-api/
+├── prisma/
+│   ├── migrations/
+│   ├── schema.prisma
+│   └── seed.ts
+│
+├── src/
+│   ├── controllers/
+│   │   ├── adminController.ts
+│   │   ├── authController.ts
+│   │   └── eventController.ts
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.ts
+│   │   └── roleMiddleware.ts
+│   │
+│   ├── routes/
+│   │   ├── adminRoutes.ts
+│   │   ├── authRoutes.ts
+│   │   └── eventRoutes.ts
+│   │
+│   ├── services/
+│   │   ├── authService.ts
+│   │   └── eventService.ts
+│   │
+│   ├── tests/
+│   │   ├── admin.test.ts
+│   │   ├── auth.test.ts
+│   │   └── events.test.ts
+│   │
+│   ├── validations/
+│   │   ├── authValidation.ts
+│   │   └── eventValidation.ts
+│   │
+│   ├── app.ts
+│   └── prisma.ts
+│
 ├── server.ts
-├── jest.config.js
+├── jest.config.ts
 ├── package.json
 ├── tsconfig.json
 └── README.md
-
----
-
+```
 ## Environment Variables
 
 Create a .env file:
