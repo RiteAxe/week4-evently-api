@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("attendee")
+
+  events    Event[]
+
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id           Int      @id @default(autoincrement())
+  title        String
+  description  String
+  location     String
+  date         DateTime
+  price        Float
+  maxAttendees Int
+  category     String
+  isPublished  Boolean  @default(false)
+
+  organizerId Int
+  organizer   User     @relation(fields: [organizerId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
